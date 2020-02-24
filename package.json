@@ -8,7 +8,7 @@
   "bugs": {
     "url": "https://github.com/nju33/vscode-user-status/issues"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./out/extension.js",
   "scripts": {
     "compile": "tsc -p ./",
