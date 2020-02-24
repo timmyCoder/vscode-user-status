@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import {Slack, SLACK_API} from './slack';
+import {Slack} from './slack';
 
 jest.mock('node-fetch');
 
@@ -44,27 +44,50 @@ describe('Slack', () => {
       ((fetch as unknown) as jest.Mock).mockReset();
     });
 
-    it.each([['coffee', 'Taking a break']])(
-      'is called with %s, %s',
-      async (emojiName, text) => {
-        const slack = new Slack('aa', 'bb');
+    it('is called with "coffee", "Taking a break"', async () => {
+      const emojiName = 'coffee';
+      const text = 'Taking a break';
 
-        await slack.setProfile(emojiName, text);
+      const slack = new Slack('aa', 'bb');
 
-        expect(((fetch as unknown) as jest.Mock).mock.calls[0][1]).toEqual(
-          expect.objectContaining({
-            body: JSON.stringify({
-              /* eslint-disable @typescript-eslint/camelcase */
-              profile: {
-                status_emoji: ':coffee:',
-                status_text: 'Taking a break',
-                status_expiration: 0,
-              },
-              /* eslint-enable @typescript-eslint/camelcase */
-            }),
+      await slack.setProfile(emojiName, text);
+
+      expect(((fetch as unknown) as jest.Mock).mock.calls[0][1]).toEqual(
+        expect.objectContaining({
+          body: JSON.stringify({
+            /* eslint-disable @typescript-eslint/camelcase */
+            profile: {
+              status_emoji: ':coffee:',
+              status_text: 'Taking a break',
+              status_expiration: 0,
+            },
+            /* eslint-enable @typescript-eslint/camelcase */
           }),
-        );
-      },
-    );
+        }),
+      );
+    });
+
+    it('is called with "", ""', async () => {
+      const emojiName = '';
+      const text = '';
+
+      const slack = new Slack('aa', 'bb');
+
+      await slack.setProfile(emojiName, text);
+
+      expect(((fetch as unknown) as jest.Mock).mock.calls[0][1]).toEqual(
+        expect.objectContaining({
+          body: JSON.stringify({
+            /* eslint-disable @typescript-eslint/camelcase */
+            profile: {
+              status_emoji: '',
+              status_text: '',
+              status_expiration: 0,
+            },
+            /* eslint-enable @typescript-eslint/camelcase */
+          }),
+        }),
+      );
+    });
   });
 });

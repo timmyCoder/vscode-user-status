@@ -1,5 +1,6 @@
 import {StatusBarItem} from 'vscode';
 import {UserStatusConfiguration} from '../configuration';
+import {STATUS_BAR_ITEM_DEFAULT_TEXT} from '../constants';
 import {GitHub} from '../github';
 import {createGithubClient} from '../github-client';
 import {Slack} from '../slack';
@@ -111,7 +112,7 @@ export const updateStatusBarItem = async (
   }
 
   if (text === '') {
-    text = '$(smiley) Set status';
+    text = STATUS_BAR_ITEM_DEFAULT_TEXT;
   }
 
   statusBarItem.text = text;

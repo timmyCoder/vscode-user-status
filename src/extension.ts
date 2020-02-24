@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import {Configuration, UserStatusConfiguration} from './configuration';
-import {COMMAND_UPDATE} from './constants';
+import {COMMAND_UPDATE, STATUS_BAR_ITEM_DEFAULT_TEXT} from './constants';
 import {GitHub} from './github';
 import {createGithubClient} from './github-client';
 import {Slack} from './slack';
@@ -29,6 +29,7 @@ const createStatusBar = (): vscode.StatusBarItem => {
     1,
   );
   statusBarItem.command = COMMAND_UPDATE;
+  statusBarItem.text = STATUS_BAR_ITEM_DEFAULT_TEXT;
 
   return statusBarItem;
 };
@@ -103,9 +104,17 @@ export async function activate(
       const showQuickPick = (): Thenable<vscode.QuickPickItem | undefined> => {
         return vscode.window.showQuickPick<vscode.QuickPickItem>(
           importStatus(configuration.language).then(json => {
-            return Object.entries(json).map(([emoji, {text}]) => ({
+            const list = Object.entries(json).map(([emoji, {text}]) => ({
               label: `${emoji} ${text}`.trim(),
             }));
+
+            if (statusBarItem.text !== STATUS_BAR_ITEM_DEFAULT_TEXT) {
+              list.unshift({
+                label: 'Clear status',
+              });
+            }
+
+            return list;
           }),
         );
       };
@@ -120,7 +129,7 @@ export async function activate(
       const emoji = quickPickItem.label!.split(/\s/)[0];
       /* eslint-enable @typescript-eslint/no-non-null-assertion */
 
-      const targetStatus: {
+      let targetStatus: {
         slack: {
           emoji_name: string;
         };
@@ -128,9 +137,25 @@ export async function activate(
           emoji_name: string;
         };
         text: string;
-      } = await importStatus(configuration.language).then(
-        status => status[emoji as keyof typeof status],
-      );
+      };
+
+      if (quickPickItem.label === 'Clear status') {
+        /* eslint-disable @typescript-eslint/camelcase */
+        targetStatus = {
+          slack: {
+            emoji_name: '',
+          },
+          github: {
+            emoji_name: '',
+          },
+          text: '',
+        };
+        /* eslint-enable @typescript-eslint/camelcase */
+      } else {
+        targetStatus = await importStatus(configuration.language).then(
+          status => status[emoji as keyof typeof status],
+        );
+      }
 
       /**
        * Update the user status of GitHub if enabled
@@ -181,7 +206,12 @@ export async function activate(
         })();
       }
 
-      statusBarItem.text = `${emoji} ${targetStatus.text}`;
+      if (quickPickItem.label === 'Clear status') {
+        statusBarItem.text = STATUS_BAR_ITEM_DEFAULT_TEXT;
+      } else {
+        statusBarItem.text = `${emoji} ${targetStatus.text}`;
+      }
+
       statusBarItem.show();
     },
   );

@@ -68,7 +68,7 @@ export class GitHub {
       .mutate<SetUserStatusMutation, SetUserStatusMutationVariables>({
         mutation: GitHub.SetUserStatusDocument,
         variables: {
-          emojiText: `:${emojiText}:`,
+          emojiText: emojiText === '' ? emojiText : `:${emojiText}:`,
           text,
         },
       })

@@ -40,7 +40,7 @@ export class SlackUsersProfileSet {
     /* eslint-disable @typescript-eslint/camelcase */
     return {
       profile: {
-        status_emoji: `:${emojiName}:`,
+        status_emoji: emojiName === '' ? emojiName : `:${emojiName}:`,
         status_text: text,
         status_expiration: 0,
       },
