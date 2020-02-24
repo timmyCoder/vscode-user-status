@@ -179,10 +179,10 @@ export async function activate(
               }
             });
         })();
-
-        statusBarItem.text = `${emoji} ${targetStatus.text}`;
-        statusBarItem.show();
       }
+
+      statusBarItem.text = `${emoji} ${targetStatus.text}`;
+      statusBarItem.show();
     },
   );
 
