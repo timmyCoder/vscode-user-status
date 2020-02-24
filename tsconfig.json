@@ -1,0 +1,14 @@
+{
+  "include": ["src", "jest.config.js"],
+  "exclude": ["node_modules", ".vscode-test"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "out",
+    "sourceMap": true,
+    "strict": true,
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  }
+}

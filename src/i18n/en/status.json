@@ -1,0 +1,65 @@
+{
+  "🎯": {
+    "slack": {
+      "emoji_name": "dart"
+    },
+    "github": {
+      "emoji_name": "dart"
+    },
+    "text": "Focusing"
+  },
+  "☕": {
+    "slack": {
+      "emoji_name": "coffee"
+    },
+    "github": {
+      "emoji_name": "coffee"
+    },
+    "text": "Taking a break"
+  },
+  "🗓": {
+    "slack": {
+      "emoji_name": "spiral_calendar_pad"
+    },
+    "github": {
+      "emoji_name": "spiral_calendar"
+    },
+    "text": "In a meeting"
+  },
+  "🚌": {
+    "slack": {
+      "emoji_name": "bus"
+    },
+    "github": {
+      "emoji_name": "bus"
+    },
+    "text": "On my way to work"
+  },
+  "🌴": {
+    "slack": {
+      "emoji_name": "palm_tree"
+    },
+    "github": {
+      "emoji_name": "palm_tree"
+    },
+    "text": "On Vacation"
+  },
+  "🏡": {
+    "slack": {
+      "emoji_name": "house_with_garden"
+    },
+    "github": {
+      "emoji_name": "house_with_garden"
+    },
+    "text": "Working from home"
+  },
+  "🤒": {
+    "slack": {
+      "emoji_name": "face_with_thermometer"
+    },
+    "github": {
+      "emoji_name": "face_with_thermometer"
+    },
+    "text": "Out sick"
+  }
+}

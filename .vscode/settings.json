@@ -1,0 +1,21 @@
+{
+  "userStatus.language": "en",
+  "userStatus.slack": {
+    "enable": true,
+    "workspaces": [
+      {
+        "user": "U...",
+        "accessToken": "ACCESS_TOKEN"
+      },
+      {
+        "user": "U...",
+        "accessToken": "ACCESS_TOKEN"
+      }
+    ]
+  },
+  "userStatus.github": {
+    "enable": true,
+    "username": "...",
+    "accessToken": "ACCESS_TOKEN"
+  }
+}

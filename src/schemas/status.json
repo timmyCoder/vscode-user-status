@@ -1,0 +1,56 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "statusDetails": {
+      "type": "object",
+      "properties": {
+        "slack": {
+          "type": "object",
+          "properties": {
+            "emoji_name": {
+              "type": "string"
+            }
+          },
+          "required": ["emoji_name"]
+        },
+        "github": {
+          "type": "object",
+          "properties": {
+            "emoji_name": {
+              "type": "string"
+            }
+          },
+          "required": ["emoji_name"]
+        },
+        "text": {"type": "string"}
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "🎯": {
+      "$ref": "#/definitions/statusDetails"
+    },
+    "☕": {
+      "$ref": "#/definitions/statusDetails"
+    },
+    "🗓": {
+      "$ref": "#/definitions/statusDetails"
+    },
+    "🚌": {
+      "$ref": "#/definitions/statusDetails"
+    },
+    "🌴": {
+      "$ref": "#/definitions/statusDetails"
+    },
+    "🏡": {
+      "$ref": "#/definitions/statusDetails"
+    },
+    "🤒": {
+      "$ref": "#/definitions/statusDetails"
+    }
+  },
+  "required": ["🎯", "☕", "🗓", "🚌", "🌴", "🏡", "🤒"],
+  "additionalProperties": false
+}
