@@ -1,27 +1,15 @@
-# Hello World Sample
+<p align="center"><img src="./icon.png" width="150"></p>
+<h2 align="center">User Status</h2>
+<p align="center">A VSCode extension to switch user status of multiple services from it.</p>
 
-This is a Hello World example that shows you how to use VS Code API.
+### Supported Services
 
-Guide for this sample: https://code.visualstudio.com/api/get-started/your-first-extension.
+- GitHub
+- Slack
 
-## Demo
+### Extension Settings
 
-![demo](demo.gif)
-
-## VS Code API
-
-### `vscode` module
-
-- [`commands.registerCommand`](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand)
-- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
-
-### Contribution Points
-
-- [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
-
-## Running the Sample
-
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View. This will:
-	- Start a task `npm: watch` to compile the code
-	- Run the extension in a new VS Code window
+- `userStatus.priority` Which one priority to get current user status `github`(default), `slack`
+- `userStatus.language` Select status language `en`(default), `ja`
+- `userStatus.github` The setting about GitHub
+- `userStatus.slack` The setting about Slack
