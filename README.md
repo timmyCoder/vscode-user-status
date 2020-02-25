@@ -1,14 +1,23 @@
-<p align="center"><img src="./icon.png" width="150"></p>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<h2 align="center">User Status</h2>
-<p align="center">A VSCode extension to switch user status of multiple services from it.</p>
+![VSCode User Status Banner](./banner.png)
 
-### Supported Services
+<h2 align="center">Supported</h2>
+<p align="center">
+  <em><a href="https://github.com/">GitHub</a> · <a href="https://slack.com/">Slack</a></em>
+</p>
 
-- GitHub
-- Slack
+<p align="center"><a href="https://marketplace.visualstudio.com/items?itemName=nju33.vscode-user-status"><img src="https://badgen.net/vs-marketplace/v/nju33.vscode-user-status" alt="vscode marketplace"></a>
+<a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier"></a>
+<img src="https://badgen.net/badge/icon/typescript?icon=typescript&amp;label" alt="typescript"></p>
+
+<!-- 
+[![vscode marketplace](https://badgen.net/vs-marketplace/v/nju33.vscode-user-status)](https://marketplace.visualstudio.com/items?itemName=nju33.vscode-user-status)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label)
+ -->
+
+### Intro
+
+A VSCode extension to switch user status of multiple services from it.
 
 ### Extension Settings
 
@@ -29,7 +38,11 @@
 |  🏡   | Working from home | リモートで作業中 |
 |  🤒   | Out sick          | 病欠             |
 
-## Contributors ✨
+### Contributors ✨
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
