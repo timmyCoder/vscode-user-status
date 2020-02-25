@@ -38,7 +38,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://nju33.com/"><img src="https://avatars2.githubusercontent.com/u/15901038?v=4" width="100px;" alt=""/><br /><sub><b>純</b></sub></a><br /><a href="https://github.com/nju33/vscode-user-status/commits?author=nju33" title="Code">💻</a> <a href="#question-nju33" title="Answering Questions">💬</a> <a href="https://github.com/nju33/vscode-user-status/pulls?q=is%3Apr+reviewed-by%3Anju33" title="Reviewed Pull Requests">👀</a> <a href="#blog-nju33" title="Blogposts">📝</a></td>
+    <td align="center"><a href="https://nju33.com/"><img src="https://avatars2.githubusercontent.com/u/15901038?v=4" width="100px;" alt=""/><br /><sub><b>純</b></sub></a><br /><a href="https://github.com/nju33/vscode-user-status/commits?author=nju33" title="Code">💻</a> <a href="#question-nju33" title="Answering Questions">💬</a> <a href="https://github.com/nju33/vscode-user-status/pulls?q=is%3Apr+reviewed-by%3Anju33" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
