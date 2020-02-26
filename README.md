@@ -21,10 +21,11 @@ A VSCode extension to switch user status of multiple services from it.
 
 ### Extension Settings
 
-- `userStatus.priority` Which one priority to get current user status `github`(default), `slack`
-- `userStatus.language` Select status language `en`(default), `ja`
-- `userStatus.github` The setting about GitHub
-- `userStatus.slack` The setting about Slack
+- `userStatus.priority` Which one priority to get current user status: `github`(default), `slack`
+- `userStatus.language` Status language: `en`(default), `ja`
+- `userStatus.status` Additional status list
+- `userStatus.github` Setting about GitHub
+- `userStatus.slack` Setting about Slack
 
 For instance, you do settings following like.
 
@@ -32,6 +33,28 @@ For instance, you do settings following like.
 {
   "userStatus.priority": "github",
   "userStatus.language": "en",
+  "userStatus.status": {
+    "📝": {
+      "github": {
+        "emojiName": "memo"
+      },
+      "slack": {
+        "emojiName": "memo"
+      },
+      "text": "Writing",
+      "priority": 150
+    },
+    "🍿": {
+      "github": {
+        "emojiName": "popcorn"
+      },
+      "slack": {
+        "emojiName": "popcorn"
+      },
+      "text": "Watching a movie",
+      "priority": 900
+    }
+  },
   "userStatus.github": {
     "enable": true,
     "username": "GITHUB_USER_NAME",
@@ -55,15 +78,19 @@ For instance, you do settings following like.
 
 ### Preset
 
-| emoji | en                | ja               |
-| :---: | :---------------- | :--------------- |
-|  🎯   | Focusing          | 集中             |
-|   ☕   | Taking a break    | 休憩中           |
-|  🗓   | In a meeting      | 会議中           |
-|  🚌   | On my way to work | 通勤途中         |
-|  🌴   | On Vacation       | 休暇中           |
-|  🏡   | Working from home | リモートで作業中 |
-|  🤒   | Out sick          | 病欠             |
+| emoji | priority | en                | ja               |
+| :---: | :------: | :---------------- | :--------------- |
+|  🎯   |   700    | Focusing          | 集中             |
+|   ☕   |   600    | Taking a break    | 休憩中           |
+|  🗓   |   500    | In a meeting      | 会議中           |
+|  🚌   |   400    | On my way to work | 通勤途中         |
+|  🌴   |   300    | On Vacation       | 休暇中           |
+|  🏡   |   200    | Working from home | リモートで作業中 |
+|  🤒   |   100    | Out sick          | 病欠             |
+
+### Status
+
+Each status item is sorted by `priority` of the setting property in descending numerical order.
 
 ### Contributors ✨
 

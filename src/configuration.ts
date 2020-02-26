@@ -21,16 +21,19 @@ export interface UserStatusSlackConfiguration {
 export interface UserStatusConfiguration {
   language: 'en' | 'ja';
   priority: 'github' | 'slack';
-  status: {
-    github: {
-      emojiName: string;
-    };
-    slack: {
-      emojiName: string;
-    };
-    text: string;
-    priority: number;
-  };
+  status: Record<
+    string,
+    {
+      github: {
+        emojiName: string;
+      };
+      slack: {
+        emojiName: string;
+      };
+      text: string;
+      priority: number;
+    }
+  >;
   slack: UserStatusSlackConfiguration;
   github: {
     enable: boolean;
@@ -58,6 +61,10 @@ export class Configuration {
 
   get priority(): UserStatusConfiguration['priority'] {
     return this.configuration.get('priority') ?? 'github';
+  }
+
+  get status(): UserStatusConfiguration['status'] {
+    return this.configuration.get('status') ?? {};
   }
 
   get slack(): Partial<UserStatusConfiguration['slack']> | undefined {

@@ -7,7 +7,7 @@
       "emojiName": "dart"
     },
     "text": "Focusing",
-    "priority": 100
+    "priority": 700
   },
   "☕": {
     "slack": {
@@ -17,7 +17,7 @@
       "emojiName": "coffee"
     },
     "text": "Taking a break",
-    "priority": 200
+    "priority": 600
   },
   "🗓": {
     "slack": {
@@ -27,7 +27,7 @@
       "emojiName": "spiral_calendar"
     },
     "text": "In a meeting",
-    "priority": 300
+    "priority": 500
   },
   "🚌": {
     "slack": {
@@ -47,7 +47,7 @@
       "emojiName": "palm_tree"
     },
     "text": "On Vacation",
-    "priority": 500
+    "priority": 300
   },
   "🏡": {
     "slack": {
@@ -57,7 +57,7 @@
       "emojiName": "house_with_garden"
     },
     "text": "Working from home",
-    "priority": 600
+    "priority": 200
   },
   "🤒": {
     "slack": {
@@ -67,6 +67,6 @@
       "emojiName": "face_with_thermometer"
     },
     "text": "Out sick",
-    "priority": 700
+    "priority": 100
   }
 }

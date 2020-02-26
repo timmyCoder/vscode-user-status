@@ -104,9 +104,13 @@ export async function activate(
       const showQuickPick = (): Thenable<vscode.QuickPickItem | undefined> => {
         return vscode.window.showQuickPick<vscode.QuickPickItem>(
           importStatus(configuration.language).then(json => {
-            const list = Object.entries(json).map(([emoji, {text}]) => ({
-              label: `${emoji} ${text}`.trim(),
-            }));
+            const list = Object.entries({...json, ...configuration.status})
+              .sort((lhs, rhs) => {
+                return rhs[1].priority - lhs[1].priority;
+              })
+              .map(([emoji, {text}]) => ({
+                label: `${emoji} ${text}`.trim(),
+              }));
 
             if (statusBarItem.text !== STATUS_BAR_ITEM_DEFAULT_TEXT) {
               list.unshift({
@@ -151,7 +155,10 @@ export async function activate(
         };
       } else {
         targetStatus = await importStatus(configuration.language).then(
-          status => status[emoji as keyof typeof status],
+          status =>
+            ({...status, ...configuration.status}[
+              emoji as keyof typeof status
+            ]),
         );
       }
 
