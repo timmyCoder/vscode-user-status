@@ -1,65 +1,72 @@
 {
   "🎯": {
     "slack": {
-      "emoji_name": "dart"
+      "emojiName": "dart"
     },
     "github": {
-      "emoji_name": "dart"
+      "emojiName": "dart"
     },
-    "text": "Focusing"
+    "text": "Focusing",
+    "priority": 100
   },
   "☕": {
     "slack": {
-      "emoji_name": "coffee"
+      "emojiName": "coffee"
     },
     "github": {
-      "emoji_name": "coffee"
+      "emojiName": "coffee"
     },
-    "text": "Taking a break"
+    "text": "Taking a break",
+    "priority": 200
   },
   "🗓": {
     "slack": {
-      "emoji_name": "spiral_calendar_pad"
+      "emojiName": "spiral_calendar_pad"
     },
     "github": {
-      "emoji_name": "spiral_calendar"
+      "emojiName": "spiral_calendar"
     },
-    "text": "In a meeting"
+    "text": "In a meeting",
+    "priority": 300
   },
   "🚌": {
     "slack": {
-      "emoji_name": "bus"
+      "emojiName": "bus"
     },
     "github": {
-      "emoji_name": "bus"
+      "emojiName": "bus"
     },
-    "text": "On my way to work"
+    "text": "On my way to work",
+    "priority": 400
   },
   "🌴": {
     "slack": {
-      "emoji_name": "palm_tree"
+      "emojiName": "palm_tree"
     },
     "github": {
-      "emoji_name": "palm_tree"
+      "emojiName": "palm_tree"
     },
-    "text": "On Vacation"
+    "text": "On Vacation",
+    "priority": 500
   },
   "🏡": {
     "slack": {
-      "emoji_name": "house_with_garden"
+      "emojiName": "house_with_garden"
     },
     "github": {
-      "emoji_name": "house_with_garden"
+      "emojiName": "house_with_garden"
     },
-    "text": "Working from home"
+    "text": "Working from home",
+    "priority": 600
   },
   "🤒": {
     "slack": {
-      "emoji_name": "face_with_thermometer"
+      "emojiName": "face_with_thermometer"
     },
     "github": {
-      "emoji_name": "face_with_thermometer"
+      "emojiName": "face_with_thermometer"
     },
-    "text": "Out sick"
+    "text": "Out sick",
+    "priority": 700
   }
 }

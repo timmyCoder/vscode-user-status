@@ -1,65 +1,72 @@
 {
   "🎯": {
     "slack": {
-      "emoji_name": "dart"
+      "emojiName": "dart"
     },
     "github": {
-      "emoji_name": "dart"
+      "emojiName": "dart"
     },
-    "text": "集中"
+    "text": "集中",
+    "priority": 100
   },
   "☕": {
     "slack": {
-      "emoji_name": "coffee"
+      "emojiName": "coffee"
     },
     "github": {
-      "emoji_name": "coffee"
+      "emojiName": "coffee"
     },
-    "text": "休憩中"
+    "text": "休憩中",
+    "priority": 200
   },
   "🗓": {
     "slack": {
-      "emoji_name": "spiral_calendar_pad"
+      "emojiName": "spiral_calendar_pad"
     },
     "github": {
-      "emoji_name": "spiral_calendar"
+      "emojiName": "spiral_calendar"
     },
-    "text": "会議中"
+    "text": "会議中",
+    "priority": 300
   },
   "🚌": {
     "slack": {
-      "emoji_name": "bus"
+      "emojiName": "bus"
     },
     "github": {
-      "emoji_name": "bus"
+      "emojiName": "bus"
     },
-    "text": "通勤途中"
+    "text": "通勤途中",
+    "priority": 400
   },
   "🌴": {
     "slack": {
-      "emoji_name": "palm_tree"
+      "emojiName": "palm_tree"
     },
     "github": {
-      "emoji_name": "palm_tree"
+      "emojiName": "palm_tree"
     },
-    "text": "休暇中"
+    "text": "休暇中",
+    "priority": 500
   },
   "🏡": {
     "slack": {
-      "emoji_name": "house_with_garden"
+      "emojiName": "house_with_garden"
     },
     "github": {
-      "emoji_name": "house_with_garden"
+      "emojiName": "house_with_garden"
     },
-    "text": "リモートで作業中"
+    "text": "リモートで作業中",
+    "priority": 600
   },
   "🤒": {
     "slack": {
-      "emoji_name": "face_with_thermometer"
+      "emojiName": "face_with_thermometer"
     },
     "github": {
-      "emoji_name": "face_with_thermometer"
+      "emojiName": "face_with_thermometer"
     },
-    "text": "病欠"
+    "text": "病欠",
+    "priority": 700
   }
 }

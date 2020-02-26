@@ -131,26 +131,24 @@ export async function activate(
 
       let targetStatus: {
         slack: {
-          emoji_name: string;
+          emojiName: string;
         };
         github: {
-          emoji_name: string;
+          emojiName: string;
         };
         text: string;
       };
 
       if (quickPickItem.label === 'Clear status') {
-        /* eslint-disable @typescript-eslint/camelcase */
         targetStatus = {
           slack: {
-            emoji_name: '',
+            emojiName: '',
           },
           github: {
-            emoji_name: '',
+            emojiName: '',
           },
           text: '',
         };
-        /* eslint-enable @typescript-eslint/camelcase */
       } else {
         targetStatus = await importStatus(configuration.language).then(
           status => status[emoji as keyof typeof status],
@@ -172,7 +170,7 @@ export async function activate(
               const slack = new Slack(workspace.user, workspace.accessToken);
 
               return slack
-                .setProfile(targetStatus.slack.emoji_name, targetStatus.text)
+                .setProfile(targetStatus.slack.emojiName, targetStatus.text)
                 .catch(error => {
                   throw error;
                 });
@@ -197,7 +195,7 @@ export async function activate(
           const github = new GitHub(client, settings.username);
 
           await github
-            .setProfile(targetStatus.github.emoji_name, targetStatus.text)
+            .setProfile(targetStatus.github.emojiName, targetStatus.text)
             .then(error => {
               if (error !== undefined) {
                 throw error;

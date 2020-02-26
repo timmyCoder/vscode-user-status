@@ -187,19 +187,46 @@
           "scope": "window",
           "description": "Additional status list",
           "type": "object",
-          "pattern": "^[a-z][a-z0-9_]*$",
           "additionalProperties": {
             "type": "object",
             "properties": {
-              "emoji": {
-                "type": "string",
-                "description": "The emoji itself"
+              "slack": {
+                "type": "object",
+                "properties": {
+                  "emojiName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "emojiName"
+                ]
+              },
+              "github": {
+                "type": "object",
+                "properties": {
+                  "emojiName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "emojiName"
+                ]
               },
               "text": {
-                "type": "string",
-                "description": "The text about status"
+                "type": "string"
+              },
+              "priority": {
+                "type": "number",
+                "minimum": 0,
+                "default": 100
               }
-            }
+            },
+            "required": [
+              "slack",
+              "github",
+              "text",
+              "priority"
+            ]
           }
         }
       }

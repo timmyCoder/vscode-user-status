@@ -21,6 +21,16 @@ export interface UserStatusSlackConfiguration {
 export interface UserStatusConfiguration {
   language: 'en' | 'ja';
   priority: 'github' | 'slack';
+  status: {
+    github: {
+      emojiName: string;
+    };
+    slack: {
+      emojiName: string;
+    };
+    text: string;
+    priority: number;
+  };
   slack: UserStatusSlackConfiguration;
   github: {
     enable: boolean;

@@ -48,19 +48,17 @@ export const updateStatusBarItem = async (
           return '';
         }
 
-        /* eslint-disable @typescript-eslint/camelcase */
         for (const [
           emoji,
           {
-            github: {emoji_name},
+            github: {emojiName: githubEmojiName},
             text,
           },
         ] of Object.entries(status)) {
-          if (emojiName === emoji_name) {
+          if (emojiName === githubEmojiName) {
             return `${emoji} ${text}`;
           }
         }
-        /* eslint-enable @typescript-eslint/camelcase */
 
         return '';
       },
@@ -79,19 +77,17 @@ export const updateStatusBarItem = async (
           return '';
         }
 
-        /* eslint-disable @typescript-eslint/camelcase */
         for (const [
           emoji,
           {
-            github: {emoji_name},
+            slack: {emojiName: slackEmojiName},
             text,
           },
         ] of Object.entries(status)) {
-          if (emojiName === emoji_name) {
+          if (emojiName === slackEmojiName) {
             return `${emoji} ${text}`;
           }
         }
-        /* eslint-enable @typescript-eslint/camelcase */
 
         return '';
       },
