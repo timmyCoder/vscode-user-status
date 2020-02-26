@@ -26,6 +26,33 @@ A VSCode extension to switch user status of multiple services from it.
 - `userStatus.github` The setting about GitHub
 - `userStatus.slack` The setting about Slack
 
+For instance, you do settings following like.
+
+```json
+{
+  "userStatus.priority": "github",
+  "userStatus.language": "en",
+  "userStatus.github": {
+    "enable": true,
+    "username": "GITHUB_USER_NAME",
+    "accessToken": "GITHUB_PERSONAL_ACCESS_TOKEN"
+  },
+  "userStatus.slack": {
+    "enable": true,
+    "workspaces": [
+      {
+        "user": "SLACK_MEMBER_ID",
+        "accessToken": "SLACK_OAUTH_ACCESS_TOKEN"
+      },
+      {
+        "user": "SLACK_MEMBER_ID(2)",
+        "accessToken": "SLACK_OAUTH_ACCESS_TOKEN(2)"
+      }
+    ]
+  }
+}
+```
+
 ### Preset
 
 | emoji | en                | ja               |
