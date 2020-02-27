@@ -12,7 +12,7 @@ import {
 
 export type UserStatusGithubConfiguration = UserStatusConfiguration['github'];
 
-const GetUserStatusDocument = gql`
+export const GetUserStatusDocument = gql`
   query getUserStatus($login: String!) {
     user(login: $login) {
       status {
@@ -23,7 +23,7 @@ const GetUserStatusDocument = gql`
   }
 `;
 
-const SetUserStatusDocument = gql`
+export const SetUserStatusDocument = gql`
   mutation setUserStatus($emojiText: String!, $text: String!) {
     changeUserStatus(input: {emoji: $emojiText, message: $text}) {
       status {
