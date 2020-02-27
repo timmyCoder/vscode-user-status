@@ -1,0 +1,20 @@
+on:
+  push:
+
+jobs:
+  jest:
+    name: jest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules
+        id: cache-node-modules
+        uses: actions/cache@v1.1.2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+      - name: Install dependencies on the project
+        if: steps.ceche-node-modules.outputs.cache-hit != 'true'
+        run: yarn
+      - name: Run test
+        run: yarn jest --coverage && yarn codecov
