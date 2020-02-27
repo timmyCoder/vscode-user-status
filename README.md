@@ -5,14 +5,18 @@
   <em><a href="https://github.com/">GitHub</a> · <a href="https://slack.com/">Slack</a></em>
 </p>
 
-<p><a href="https://marketplace.visualstudio.com/items?itemName=nju33.vscode-user-status"><img src="https://badgen.net/vs-marketplace/v/nju33.vscode-user-status" alt="vscode marketplace"></a>
+<!-- Should add align=center to the parent p tag -->
+<p align="center"><a href="https://marketplace.visualstudio.com/items?itemName=nju33.vscode-user-status"><img src="https://badgen.net/vs-marketplace/v/nju33.vscode-user-status" alt="vscode marketplace"></a>
 <img src="https://github.com/nju33/vscode-user-status/workflows/.github/workflows/test.yml/badge.svg" alt=".github/workflows/test.yml">
+<a href="https://codecov.io/gh/nju33/vscode-user-status"><img src="https://codecov.io/gh/nju33/vscode-user-status/branch/master/graph/badge.svg" alt="codecov"></a>
 <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier"></a>
 <img src="https://badgen.net/badge/icon/typescript?icon=typescript&amp;label" alt="typescript"></p>
+
 
 <!-- 
 [![vscode marketplace](https://badgen.net/vs-marketplace/v/nju33.vscode-user-status)](https://marketplace.visualstudio.com/items?itemName=nju33.vscode-user-status)
 ![.github/workflows/test.yml](https://github.com/nju33/vscode-user-status/workflows/.github/workflows/test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/nju33/vscode-user-status/branch/master/graph/badge.svg)](https://codecov.io/gh/nju33/vscode-user-status)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label)
  -->
