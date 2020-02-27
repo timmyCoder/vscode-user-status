@@ -39,6 +39,8 @@ jobs:
       - prepare
     name: jest
     runs-on: ubuntu-latest
+    env:
+      CODECOV_TOKEN: ${{ secrets.CodecovToken }}
     steps:
       - uses: actions/checkout@v2
       - name: Cache node_modules
