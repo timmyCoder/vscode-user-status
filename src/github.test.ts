@@ -1,4 +1,3 @@
-/* eslint-disable capitalized-comments */
 import {NormalizedCacheObject} from 'apollo-cache-inmemory';
 import ApolloClient from 'apollo-client';
 import fetch from 'node-fetch';
