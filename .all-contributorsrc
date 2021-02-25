@@ -1,6 +1,6 @@
 {
   "projectName": "vscode-user-status",
-  "projectOwner": "nju33",
+  "projectOwner": "timmyCoder",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -20,6 +20,27 @@
         "question",
         "review"
       ]
+    }
+  ],
+  [
+    {
+      "login": "wyang0216",
+      "name": "William Yang",
+      "profile": "https://github.com/wyang0216",
+    }
+  ],
+  [
+    {
+      "login": "timmyCoder",
+      "name": "Daniel Olatoye",
+      "profile": "http://timmycoder.me/",
+    }
+  ],
+  [
+    {
+      "login": "alexzender45",
+      "name": "Samuel Alexander",
+      "profile": "https://alexzender45.github.io/portfolio/#/",
     }
   ],
   "contributorsPerLine": 7
